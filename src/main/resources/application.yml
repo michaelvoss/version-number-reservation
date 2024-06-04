@@ -1,0 +1,31 @@
+server:
+  port: ${PORT:9199}
+
+# Launch the default browser when starting the application in development mode
+vaadin:
+  launch-browser: true
+
+# To improve the performance during development.
+# For more information https://vaadin.com/docs/latest/integrations/spring/configuration#special-configuration-parameters
+  allowed-packages: com.vaadin,org.vaadin,dev.hilla,de.lvr.soziales
+
+spring:
+  mustache:
+    check-template-location: false
+  datasource:
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@ORA-ZV91:42100:ANLEIT
+    username: ANLEIAO
+    password: LVR
+  jpa:
+    defer-datasource-initialization: true
+#    database-platform: org.hibernate.dialect.Oracle10gDialect
+    generate-ddl: false
+    open-in-view: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      jdbc:
+        time_zone: Europe/Berlin
+
+

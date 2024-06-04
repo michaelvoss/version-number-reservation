@@ -14,10 +14,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @Theme(value = "version-number-reservation")
-public class Application implements AppShellConfigurator {
+public class VersionReservation implements AppShellConfigurator {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(VersionReservation.class, args);
     }
 
 }
